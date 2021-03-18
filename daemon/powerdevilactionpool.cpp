@@ -91,7 +91,7 @@ void ActionPool::clearCache()
 void ActionPool::init(PowerDevil::Core *parent)
 {
     // Load all the actions
-    const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("PowerDevil/Action"),
+    const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("PowerDevil/Action"), //
                                                               QStringLiteral("[X-KDE-PowerDevil-Action-IsBundled] == FALSE"));
     for (const KService::Ptr offer : offers) {
         QString actionId = offer->property(QStringLiteral("X-KDE-PowerDevil-Action-ID"), QVariant::String).toString();
@@ -148,7 +148,7 @@ void ActionPool::init(PowerDevil::Core *parent)
 
     // Register DBus objects
     {
-        const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("PowerDevil/Action"),
+        const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("PowerDevil/Action"), //
                                                                 QStringLiteral("[X-KDE-PowerDevil-Action-RegistersDBusInterface] == TRUE"));
         for (const KService::Ptr offer : offers) {
             QString actionId = offer->property(QStringLiteral("X-KDE-PowerDevil-Action-ID"), QVariant::String).toString();
