@@ -39,7 +39,7 @@ public:
     enum PowerSavingOption {
         NoAction = 0,
         TurnOff = 1,
-        TurnOn = 2
+        TurnOn = 2,
     };
 
     explicit WirelessPowerSaving(QObject* parent);

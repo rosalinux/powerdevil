@@ -49,7 +49,7 @@ public:
         LogoutDialogMode = 16,
         LockScreenMode = 32,
         TurnOffScreenMode = 64,
-        ToggleScreenOnOffMode = 128
+        ToggleScreenOnOffMode = 128,
     };
 
     explicit SuspendSession(QObject *parent);

@@ -49,7 +49,10 @@ class Client;
 class ClientPrivate
 {
     public:
-        enum ListenToWhat { ListenToList, ListenToNone };
+        enum ListenToWhat {
+            ListenToList,
+            ListenToNone,
+        };
 
         explicit ClientPrivate(Client *q_);
         ~ClientPrivate();
