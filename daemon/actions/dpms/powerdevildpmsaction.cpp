@@ -150,7 +150,7 @@ void PowerDevilDPMSAction::onIdleTimeout(int msec)
 void PowerDevilDPMSAction::setKeyboardBrightnessHelper(int brightness)
 {
     trigger({
-        {"KeyboardBrightness", QVariant::fromValue(brightness)}
+        {"KeyboardBrightness", QVariant::fromValue(brightness)},
     });
 }
 

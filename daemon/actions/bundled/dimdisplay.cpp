@@ -90,7 +90,7 @@ void DimDisplay::setBrightnessHelper(int screen, int keyboard, bool force)
     trigger({
         {QStringLiteral("_ScreenBrightness"), QVariant::fromValue(screen)},
         {QStringLiteral("_KeyboardBrightness"), QVariant::fromValue(keyboard)},
-        {QStringLiteral("Explicit"), QVariant::fromValue(force)}
+        {QStringLiteral("Explicit"), QVariant::fromValue(force)},
     });
 }
 

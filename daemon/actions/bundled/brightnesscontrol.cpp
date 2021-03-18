@@ -161,7 +161,7 @@ void BrightnessControl::setBrightness(int value)
 {
     trigger({
         {QStringLiteral("Value"), QVariant::fromValue(value)},
-        {QStringLiteral("Explicit"), true}
+        {QStringLiteral("Explicit"), true},
     });
 }
 
@@ -170,7 +170,7 @@ void BrightnessControl::setBrightnessSilent(int value)
     trigger({
         {QStringLiteral("Value"), QVariant::fromValue(value)},
         {QStringLiteral("Explicit"), true},
-        {QStringLiteral("Silent"), true}
+        {QStringLiteral("Silent"), true},
     });
 }
 

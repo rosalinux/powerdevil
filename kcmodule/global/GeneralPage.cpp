@@ -206,7 +206,7 @@ void GeneralPage::save()
         action.setHelperId(QStringLiteral("org.kde.powerdevil.chargethresholdhelper"));
         action.setArguments({
             {QStringLiteral("chargeStartThreshold"), chargeStartThresholdSpin->value()},
-            {QStringLiteral("chargeStopThreshold"), chargeStopThresholdSpin->value()}
+            {QStringLiteral("chargeStopThreshold"), chargeStopThresholdSpin->value()},
         });
         KAuth::ExecuteJob *job = action.execute();
         job->exec();
