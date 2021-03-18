@@ -32,8 +32,7 @@
 
 K_PLUGIN_FACTORY(PowerDevilWirelessPowerSavingConfigFactory, registerPlugin<PowerDevil::BundledActions::WirelessPowerSavingConfig>(); )
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 WirelessPowerSavingConfig::WirelessPowerSavingConfig(QObject *parent, const QVariantList& )
     : ActionConfig(parent)
@@ -118,7 +117,6 @@ QList< QPair< QString, QWidget* > > WirelessPowerSavingConfig::buildUi()
     return retlist;
 }
 
-}
 }
 
 #include "wirelesspowersavingconfig.moc"

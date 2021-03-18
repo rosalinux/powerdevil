@@ -36,10 +36,8 @@
 
 #include <PowerDevilSettings.h>
 
-namespace PowerDevil
-{
-namespace BundledActions
-{
+namespace PowerDevil::BundledActions {
+
 
 SuspendSession::SuspendSession(QObject* parent)
     : Action(parent),
@@ -211,5 +209,4 @@ void SuspendSession::triggerSuspendSession(uint action)
     });
 }
 
-}
 }

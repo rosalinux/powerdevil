@@ -25,8 +25,7 @@
 
 class QSlider;
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class Q_DECL_EXPORT KeyboardBrightnessControlConfig : public PowerDevil::ActionConfig
 {
@@ -44,7 +43,6 @@ private:
     QSlider *m_slider;
 };
 
-}
 }
 
 #endif // POWERDEVIL_BUNDLEDACTIONS_KEYBOARDBRIGHTNESSCONTROLCONFIG_H

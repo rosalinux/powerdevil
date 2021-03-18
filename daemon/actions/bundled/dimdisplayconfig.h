@@ -25,8 +25,7 @@
 
 class QSpinBox;
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class DimDisplayConfig : public PowerDevil::ActionConfig
 {
@@ -43,8 +42,6 @@ public:
 private:
     QSpinBox *m_spinBox;
 };
-
-}
 
 }
 

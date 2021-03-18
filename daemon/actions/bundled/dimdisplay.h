@@ -24,8 +24,7 @@
 #include <powerdevilaction.h>
 
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class DimDisplay : public PowerDevil::Action
 {
@@ -57,8 +56,6 @@ private:
 
     bool m_dimmed = false;
 };
-
-}
 
 }
 

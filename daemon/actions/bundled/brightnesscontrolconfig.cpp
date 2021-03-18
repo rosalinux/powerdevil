@@ -30,8 +30,7 @@
 
 K_PLUGIN_FACTORY(PowerDevilBrightnessControlConfigFactory, registerPlugin<PowerDevil::BundledActions::BrightnessControlConfig>(); )
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 BrightnessControlConfig::BrightnessControlConfig(QObject *parent, const QVariantList& )
     : ActionConfig(parent)
@@ -74,8 +73,6 @@ QList< QPair< QString, QWidget* > > BrightnessControlConfig::buildUi()
     return retlist;
 }
 
-
-}
 }
 
 #include "brightnesscontrolconfig.moc"

@@ -36,8 +36,7 @@
 
 K_PLUGIN_FACTORY(PowerDevilSuspendSessionConfigFactory, registerPlugin<PowerDevil::BundledActions::SuspendSessionConfig>(); )
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 SuspendSessionConfig::SuspendSessionConfig(QObject* parent, const QVariantList&)
         : ActionConfig(parent),
@@ -123,7 +122,6 @@ QList< QPair< QString, QWidget* > > SuspendSessionConfig::buildUi()
     return retlist;
 }
 
-}
 }
 
 #include "suspendsessionconfig.moc"

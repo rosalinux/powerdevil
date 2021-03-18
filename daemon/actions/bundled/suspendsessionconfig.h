@@ -27,8 +27,7 @@ class KComboBox;
 class QCheckBox;
 class QSpinBox;
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class SuspendSessionConfig : public PowerDevil::ActionConfig
 {
@@ -48,7 +47,6 @@ private:
     KComboBox *m_comboBox;
 };
 
-}
 }
 
 #endif // POWERDEVIL_BUNDLEDACTIONS_SUSPENDSESSIONCONFIG_H

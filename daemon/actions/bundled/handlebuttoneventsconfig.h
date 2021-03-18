@@ -25,8 +25,7 @@
 
 class QComboBox;
 class QCheckBox;
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class HandleButtonEventsConfig : public PowerDevil::ActionConfig
 {
@@ -46,8 +45,6 @@ private:
     QCheckBox *m_triggerLidActionWhenExternalMonitorPresent;
     QComboBox *m_powerButtonCombo;
 };
-
-}
 
 }
 

@@ -28,8 +28,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 DimDisplay::DimDisplay(QObject* parent) : Action(parent)
 {
@@ -128,5 +127,4 @@ bool DimDisplay::loadAction(const KConfigGroup& config)
     return true;
 }
 
-}
 }

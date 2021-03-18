@@ -34,8 +34,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KGlobalAccel>
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 BrightnessControl::BrightnessControl(QObject* parent)
     : Action(parent)
@@ -205,5 +204,4 @@ int BrightnessControl::brightnessPercent(float value) const
     return qRound(value / maxBrightness * 100);
 }
 
-}
 }

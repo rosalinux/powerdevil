@@ -26,8 +26,7 @@
 
 #include <BluezQt/Manager>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class WirelessPowerSaving : public PowerDevil::Action
 {
@@ -83,8 +82,6 @@ private:
     bool m_lastWwanState;
     bool m_lastBtState;
 };
-
-}
 
 }
 

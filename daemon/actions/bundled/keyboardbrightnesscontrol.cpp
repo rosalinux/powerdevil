@@ -39,8 +39,7 @@
 #include <QDBusInterface>
 #include <QDBusPendingCall>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 KeyboardBrightnessControl::KeyboardBrightnessControl(QObject* parent)
     : Action(parent)
@@ -225,5 +224,4 @@ int KeyboardBrightnessControl::keyboardBrightnessPercent() const
     return qRound(keyboardBrightness() / maxBrightness * 100);
 }
 
-}
 }

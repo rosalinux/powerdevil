@@ -29,8 +29,7 @@
 #include <NetworkManagerQt/Manager>
 
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 WirelessPowerSaving::WirelessPowerSaving(QObject* parent)
     : Action(parent)
@@ -196,8 +195,6 @@ void WirelessPowerSaving::setMobileBroadbandEnabled(bool enabled)
 void WirelessPowerSaving::setWirelessEnabled(bool enabled)
 {
     NetworkManager::setWirelessEnabled(enabled);
-}
-
 }
 
 }

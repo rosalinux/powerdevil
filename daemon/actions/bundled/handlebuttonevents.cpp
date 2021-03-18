@@ -40,8 +40,7 @@
 
 #include <KGlobalAccel>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 HandleButtonEvents::HandleButtonEvents(QObject *parent)
     : Action(parent)
@@ -269,5 +268,4 @@ void HandleButtonEvents::checkOutputs()
     }
 }
 
-}
 }

@@ -24,8 +24,7 @@
 
 #include <KConfigGroup>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 RunScript::RunScript(QObject* parent)
     : Action(parent)
@@ -109,5 +108,4 @@ void RunScript::runCommand()
     }
 }
 
-}
 }

@@ -24,8 +24,7 @@
 #include <powerdevilaction.h>
 #include <powerdevilbackendinterface.h>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class KeyboardBrightnessControl : public PowerDevil::Action
 {
@@ -75,8 +74,6 @@ private:
     QString m_lastProfile;
     QString m_currentProfile;
 };
-
-}
 
 }
 

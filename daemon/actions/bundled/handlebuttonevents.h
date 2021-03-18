@@ -27,8 +27,7 @@
 #include <powerdevilaction.h>
 #include <powerdevilbackendinterface.h>
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class HandleButtonEvents : public PowerDevil::Action
 {
@@ -80,8 +79,6 @@ private:
     uint m_sleepButtonAction = 1;
     uint m_hibernateButtonAction = 2;
 };
-
-}
 
 }
 

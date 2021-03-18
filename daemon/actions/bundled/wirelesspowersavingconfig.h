@@ -25,8 +25,7 @@
 
 class QComboBox;
 
-namespace PowerDevil {
-namespace BundledActions {
+namespace PowerDevil::BundledActions {
 
 class WirelessPowerSavingConfig : public PowerDevil::ActionConfig
 {
@@ -47,7 +46,6 @@ private:
     QComboBox *m_wwanCombobox;
 };
 
-}
 }
 
 #endif // POWERDEVIL_BUNDLEDACTIONS_WIRELESSPOWERSAVINGCONFIG_H
