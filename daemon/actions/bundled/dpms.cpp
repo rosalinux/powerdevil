@@ -121,9 +121,9 @@ void DPMS::onWakeupFromIdle()
     if (isSupported()) {
         m_helper->stopFade();
     }
-    if (m_oldKeyboardBrightness > 0) {
+    if ((int)m_oldKeyboardBrightness > 0) {
         setKeyboardBrightnessHelper(m_oldKeyboardBrightness);
-        m_oldKeyboardBrightness = 0;
+        m_oldKeyboardBrightness = 0_pb;
     }
 }
 
@@ -139,10 +139,10 @@ void DPMS::onIdleTimeout(int msec)
             m_helper->startFade();
         }
     } else if (msec == m_idleTime * 1000) {
-        const int brightness = backend()->brightness(PowerDevil::BackendInterface::Keyboard);
-        if (brightness > 0) {
+        const PerceivedBrightness brightness = backend()->perceivedBrightness(PowerDevil::BackendInterface::Keyboard);
+        if ((int)brightness > 0) {
             m_oldKeyboardBrightness = brightness;
-            setKeyboardBrightnessHelper(0);
+            setKeyboardBrightnessHelper(0_pb);
         }
         if (isSupported()) {
             m_helper->dpmsTimeout();
@@ -150,7 +150,7 @@ void DPMS::onIdleTimeout(int msec)
     }
 }
 
-void DPMS::setKeyboardBrightnessHelper(int brightness)
+void DPMS::setKeyboardBrightnessHelper(PerceivedBrightness brightness)
 {
     trigger({
         {"KeyboardBrightness", QVariant::fromValue(brightness)}
@@ -169,7 +169,7 @@ void DPMS::triggerImpl(const QVariantMap& args)
 {
     QString KEYBOARD_BRIGHTNESS = QStringLiteral("KeyboardBrightness");
     if (args.contains(KEYBOARD_BRIGHTNESS)) {
-        backend()->setBrightness(args.value(KEYBOARD_BRIGHTNESS).toInt(), PowerDevil::BackendInterface::Keyboard);
+        backend()->setBrightness(ActualBrightness(args.value(KEYBOARD_BRIGHTNESS).value<PerceivedBrightness>(), backend()->brightnessMax(PowerDevil::BackendInterface::Keyboard)), PowerDevil::BackendInterface::Keyboard);
         return;
     }
 

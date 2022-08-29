@@ -23,6 +23,7 @@
 #define POWERDEVILDPMSACTION_H
 
 #include <powerdevilaction.h>
+#include "brightnessvalue.h"
 
 #include <QScopedPointer>
 
@@ -56,12 +57,12 @@ private Q_SLOTS:
     void onUnavailablePoliciesChanged(PowerDevil::PolicyAgent::RequiredPolicies policies);
 
 private:
-    void setKeyboardBrightnessHelper(int brightness);
+    void setKeyboardBrightnessHelper(PerceivedBrightness brightness);
 
     int m_idleTime = 0;
     PowerDevil::PolicyAgent::RequiredPolicies m_inhibitScreen = PowerDevil::PolicyAgent::None;
 
-    int m_oldKeyboardBrightness = 0;
+    PerceivedBrightness m_oldKeyboardBrightness = 0_pb;
     QScopedPointer<AbstractDpmsHelper> m_helper;
 
     bool m_lockBeforeTurnOff = false;
