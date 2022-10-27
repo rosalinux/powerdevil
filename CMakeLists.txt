@@ -67,7 +67,7 @@ set_package_properties(Libcap PROPERTIES
 )
 set(HAVE_LIBCAP ${Libcap_FOUND})
 
-option(HAVE_DDCUTIL "DDCUtil library support" OFF)
+option(HAVE_DDCUTIL "DDCUtil library support" ON)
 if(HAVE_DDCUTIL)
     find_package(DDCUtil REQUIRED)
     add_definitions(-DWITH_DDCUTIL)
@@ -76,8 +76,6 @@ if(HAVE_DDCUTIL)
         TYPE OPTIONAL
         PURPOSE "Set monitor settings over DDC/CI channel"
     )
-else()
-    add_feature_info("DDCUtil" HAVE_DDCUTIL "DDCUtil library support is disabled by default as recommended by authors, add -DHAVE_DDCUTIL=On to enable")
 endif()
 
 include_directories (
