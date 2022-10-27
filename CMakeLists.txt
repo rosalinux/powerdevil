@@ -67,9 +67,8 @@ set_package_properties(Libcap PROPERTIES
 )
 set(HAVE_LIBCAP ${Libcap_FOUND})
 
-option(HAVE_DDCUTIL "DDCUtil library support" ON)
-if(HAVE_DDCUTIL)
-    find_package(DDCUtil REQUIRED)
+find_package(DDCUtil)
+if(DDCUtil_FOUND)
     add_definitions(-DWITH_DDCUTIL)
     set_package_properties(DDCUtil
         PROPERTIES DESCRIPTION "DDCUtil library support"
